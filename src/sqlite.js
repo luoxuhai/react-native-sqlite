@@ -7,8 +7,9 @@
  * This library is available under the terms of the MIT License (2008).
  * See http://opensource.org/licenses/alphabetical for full text.
  */
-var plugin = require('./lib/sqlite.core.js');
-var {SQLiteFactory} = plugin;
+import plugin from './sqlite.core.js';
+
+var { SQLiteFactory } = plugin;
 
 var config = [
 
@@ -82,4 +83,4 @@ function createPromiseRuntime() {
 }
 SQLiteFactory.prototype.enablePromise = enablePromiseRuntime;
 
-module.exports = new SQLiteFactory();
+export default new SQLiteFactory();

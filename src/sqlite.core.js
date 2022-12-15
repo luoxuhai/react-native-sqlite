@@ -13,7 +13,8 @@
  * See http://opensource.org/licenses/alphabetical for full text.
  */
 
-var NativeModules = require("react-native").NativeModules;
+import { NativeModules } from "react-native";
+
 var DB_STATE_INIT, DB_STATE_OPEN, READ_ONLY_REGEX, SQLiteFactory, SQLitePlugin, SQLitePluginTransaction, argsArray, dblocations, newSQLError, txLocks;
 
 var plugin = {};
@@ -852,4 +853,4 @@ plugin.sqlitePlugin = {
   log: plugin.log
 };
 
-module.exports = plugin.sqlitePlugin;
+export default plugin.sqlitePlugin;
